@@ -1,0 +1,28 @@
+.site-footer {
+    background-color:$orange;
+    padding: 0 space(2);
+    &-logo{
+        &__image{
+            @include imageBg('../img-dist/logo-footer.png', rem(200px), rem(200px));
+        }
+    }
+    &-redes{
+        display: flex;
+        gap:rem(30px);
+        align-items: center;
+        justify-content: flex-end;
+        .menu{
+            display: flex;
+            gap: space(.5);
+            li{
+                &:nth-child(1){
+                    @include imageBg('../img-dist/facebook.png', rem(50px), rem(50px));
+                }
+                &:nth-child(2){
+                    @include imageBg('../img-dist/Instagram.png', rem(50px), rem(50px));
+                }
+            }
+        }
+    }
+}
+

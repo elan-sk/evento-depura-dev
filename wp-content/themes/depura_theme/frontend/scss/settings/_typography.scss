@@ -1,0 +1,50 @@
+%h1, .h1,
+h1 {
+  color: $blue;
+  font-family: $font-primary;
+  font-size:56px;
+  font-weight: bold;
+  line-height: 1.5;
+}
+
+
+%h2, .h2,
+h2 {
+  @extend %h1;
+  font-size: rem(48px);
+}
+
+%h3, .h3,
+h3 {
+  @extend %h1;
+  font-size: rem(30px);
+}
+
+
+%h4, .h4, h4 {
+  @extend %h1;
+  font-size:24px;
+}
+
+%body{
+  @extend %h4;
+}
+
+p,
+ul,
+ol,
+div {
+  @extend %body;
+}
+
+strong,
+b {
+  font-weight: bold;
+}
+
+a {
+  @extend %h2;
+  font-size: rem(16px);
+  font-weight: bold;
+  text-decoration: none;
+}

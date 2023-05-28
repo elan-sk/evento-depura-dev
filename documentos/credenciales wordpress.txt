@@ -1,0 +1,11 @@
+crear bd evento-dp
+
+base de datos: evento-dp
+usuario: root
+pass: vacio
+servidor: localhost
+////////////////////////////
+usuario del sitio 
+dev
+pass: eventodepura
+//////////////////////////////

@@ -1,0 +1,376 @@
+a, .h2,
+h2, .h3,
+h3,
+.title-2,
+.title-3,
+.title, .button-secondary, .button-tertiary, .button-primary, .button, .h1,
+h1 {
+  color: #1932D7;
+  font-family: "Nunito", sans-serif;
+  font-size: 2.8125rem;
+  font-weight: 800;
+  line-height: 1.5; }
+  @media only screen and (min-width: 768px) {
+    a, .h2,
+    h2, .h3,
+    h3,
+    .title-2,
+    .title-3,
+    .title, .button-secondary, .button-tertiary, .button-primary, .button, .h1,
+    h1 {
+      font-size: 3.375rem; } }
+  @media only screen and (min-width: 1470px) {
+    a, .h2,
+    h2, .h3,
+    h3,
+    .title-2,
+    .title-3,
+    .title, .button-secondary, .button-tertiary, .button-primary, .button, .h1,
+    h1 {
+      font-size: 4rem; } }
+
+a, .h2,
+h2 {
+  font-size: 1.75rem;
+  line-height: 1.4; }
+  @media only screen and (min-width: 768px) {
+    a, .h2,
+    h2 {
+      font-size: 2.25rem; } }
+  @media only screen and (min-width: 1470px) {
+    a, .h2,
+    h2 {
+      font-size: 2.8125rem; } }
+
+.h3,
+h3 {
+  font-size: 1.25rem;
+  line-height: 1.4; }
+  @media only screen and (min-width: 768px) {
+    .h3,
+    h3 {
+      font-size: 1.375rem; } }
+  @media only screen and (min-width: 1470px) {
+    .h3,
+    h3 {
+      font-size: 2rem; } }
+
+
+.title-2,
+.title-3,
+.title {
+  font-size: 1.375rem;
+  line-height: 1.5; }
+  @media only screen and (min-width: 768px) {
+    
+    .title-2,
+    .title-3,
+    .title {
+      font-size: 1.5625rem; } }
+  @media only screen and (min-width: 1470px) {
+    
+    .title-2,
+    .title-3,
+    .title {
+      font-size: 1.875rem; } }
+
+
+.title-2 {
+  font-size: 1.125rem;
+  line-height: 1.4; }
+  @media only screen and (min-width: 768px) {
+    
+    .title-2 {
+      font-size: 1.25rem; } }
+  @media only screen and (min-width: 1470px) {
+    
+    .title-2 {
+      font-size: 1.375rem; } }
+
+
+.title-3 {
+  font-size: 1rem;
+  line-height: 1.4; }
+  @media only screen and (min-width: 768px) {
+    
+    .title-3 {
+      font-size: 1.125rem; } }
+  @media only screen and (min-width: 1470px) {
+    
+    .title-3 {
+      font-size: 1.25rem; } }
+
+p,
+ul,
+ol,
+div,
+.highlight {
+  font-family: "Open Sans", sans-serif;
+  font-size: 1rem;
+  line-height: 1.4; }
+  @media only screen and (min-width: 768px) {
+    p,
+    ul,
+    ol,
+    div,
+    .highlight {
+      font-size: 1.125rem; } }
+  @media only screen and (min-width: 1470px) {
+    p,
+    ul,
+    ol,
+    div,
+    .highlight {
+      font-size: 1.25rem; } }
+
+p,
+ul,
+ol,
+div {
+  color: #1932D7;
+  font-size: 0.875rem;
+  font-weight: normal;
+  line-height: 1.4; }
+  @media only screen and (min-width: 768px) {
+    p,
+    ul,
+    ol,
+    div {
+      font-size: 1rem; } }
+  @media only screen and (min-width: 1470px) {
+    p,
+    ul,
+    ol,
+    div {
+      font-size: 1.125rem; } }
+
+.button-secondary, .button-tertiary, .button-primary, .button {
+  font-size: 1rem;
+  font-weight: bold; }
+
+strong,
+b {
+  font-weight: bold; }
+
+a {
+  font-size: 1rem;
+  font-weight: bold;
+  text-decoration: none; }
+  a:hover {
+    color: #C800FF; }
+
+@keyframes slideUp {
+  0% {
+    transform: translateY(0); }
+  100% {
+    transform: translateY(-100%); } }
+
+@keyframes slideUpBottom {
+  0% {
+    transform: translateY(100%); }
+  100% {
+    transform: translateY(0); } }
+
+@keyframes slideDown {
+  0% {
+    transform: translateY(-100%); }
+  100% {
+    transform: translateY(0); } }
+
+@keyframes slideDownBottom {
+  0% {
+    transform: translateY(0); }
+  100% {
+    transform: translateY(100%); } }
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1; }
+  100% {
+    opacity: 0;
+    display: none; } }
+
+@keyframes placeholderFade {
+  0% {
+    opacity: .1; }
+  50% {
+    opacity: .3; }
+  100% {
+    opacity: .1; } }
+
+@keyframes slideFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(50px); }
+  50% {
+    transform: translateY(10px); }
+  90% {
+    transform: translateY(0); }
+  100% {
+    opacity: 1; } }
+
+
+.slide-up {
+  animation: slideUp .3s ease-out forwards; }
+
+
+.slide-down {
+  animation: slideDown .3s ease-out forwards; }
+
+button {
+  background: none;
+  border: none;
+  text-decoration: none;
+  white-space: nowrap; }
+
+body,
+html {
+  height: 100%; }
+
+body {
+  direction: ltr;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  padding-top: 200px; }
+  @media only screen and (min-width: 992px) {
+    body {
+      padding-top: 174px; } }
+
+ul {
+  padding-left: 0;
+  list-style: none; }
+
+input::-moz-placeholder, textarea::-moz-placeholder {
+  color: gray; }
+
+input::placeholder,
+textarea::placeholder {
+  color: gray; }
+
+input:active::-moz-placeholder, textarea:active::-moz-placeholder {
+  color: gray; }
+
+input:active::placeholder,
+textarea:active::placeholder {
+  color: gray; }
+
+input[type="number"] {
+  -webkit-appearance: textfield;
+     -moz-appearance: textfield;
+          appearance: textfield; }
+  input[type="number"]::-webkit-outer-spin-button, input[type="number"]::-webkit-inner-spin-button {
+    margin: 0;
+    -webkit-appearance: none;
+            appearance: none; }
+
+.button-secondary, .button-tertiary, .button-primary, .button {
+  border-radius: 2.5rem;
+  display: inline-block;
+  margin: 0.1875rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+  overflow: hidden;
+  padding: 9px 1.875rem;
+  text-align: center;
+  text-decoration: none;
+  transition: all 0.3s ease-in; }
+
+.button-secondary, .button-tertiary, .button-primary {
+  border: none;
+  background-color: #C800FF;
+  color: #ffffff; }
+  .button-secondary:hover, .button-tertiary:hover, .button-primary:hover {
+    background-color: #1932D7;
+    color: #ffffff; }
+
+.button-secondary {
+  background-color: #ffffff;
+  color: #C800FF;
+  border: 2px solid #C800FF; }
+  .button-secondary:hover {
+    background-color: #C800FF;
+    color: #ffffff; }
+
+.button-tertiary {
+  background-color: #ffffff;
+  color: #1932D7;
+  border: 2px solid #1932D7; }
+  .button-tertiary:hover {
+    background-color: #1932D7;
+    color: #ffffff; }
+
+.site-footer {
+  background-color: #fda130;
+  padding: 0 3.75rem; }
+  .site-footer-logo__image {
+    display: block;
+    background-image: url(../img-dist/3173fd4ce81690e71f4fb5aeb8e82153.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    font-size: 0;
+    height: 12.5rem;
+    text-indent: -999999px;
+    overflow: hidden;
+    width: 12.5rem; }
+  .site-footer-redes {
+    display: flex;
+    gap: 1.875rem;
+    align-items: center;
+    justify-content: flex-end; }
+    .site-footer-redes .menu {
+      display: flex;
+      gap: 0.9375rem; }
+      .site-footer-redes .menu li:nth-child(1) {
+        display: block;
+        background-image: url(../img-dist/2675814e59cd35433fd4282c1e28dd79.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center center;
+        font-size: 0;
+        height: 3.125rem;
+        text-indent: -999999px;
+        overflow: hidden;
+        width: 3.125rem; }
+      .site-footer-redes .menu li:nth-child(2) {
+        display: block;
+        background-image: url(../img-dist/f79e8b2c526ac7223d47cadbe6cf4d09.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center center;
+        font-size: 0;
+        height: 3.125rem;
+        text-indent: -999999px;
+        overflow: hidden;
+        width: 3.125rem; }
+
+.main-menu {
+  background-color: #F5F5F5; }
+  .main-menu-brand {
+    display: flex;
+    align-items: center;
+    padding-left: 2.5rem; }
+    .main-menu-brand__logo {
+      display: block;
+      background-image: url(../img-dist/fee97f1e39b920dbbd6d6037ffcf3810.png);
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center center;
+      font-size: 0;
+      height: 3.125rem;
+      text-indent: -999999px;
+      overflow: hidden;
+      width: 6.25rem; }
+  .main-menu-menu {
+    padding: 0.46875rem 1.875rem; }
+    .main-menu-menu__nav {
+      display: flex;
+      justify-content: flex-end;
+      gap: 2.8125rem; }
+

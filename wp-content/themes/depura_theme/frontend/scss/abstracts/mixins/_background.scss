@@ -1,0 +1,35 @@
+@mixin faIcon($content, $size) {
+  display: block;
+  content: $content;
+  font-family: "Font Awesome 5 Free", "Font Awesome 5 Brands";
+  font-size: $size;
+  font-style: normal;
+  font-weight: 900;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+}
+
+@mixin imageBg($path, $height, $width) {
+  display: block;
+  background-image: url($path);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  font-size: 0;
+  height: $height;
+  text-indent: -999999px;
+  overflow: hidden;
+  width: $width;
+}
+
+@mixin imageBgSplit($path, $img-width,$img-height, $split-top, $split-left) {
+  display: block;
+  background-image: url($path);
+  background-size: 218px 89px;
+  background-repeat: no-repeat;
+  background-position: top -1*($split-top) left -1*($split-left);
+  font-size: 0;
+  text-indent: -999999px;
+  overflow: hidden;
+}

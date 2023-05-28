@@ -1,0 +1,183 @@
+{
+	// Place your snippets for html here. Each snippet is defined under a snippet name and has a prefix, body and
+	// description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. Placeholders with the
+	// same ids are connected.
+	// Example:
+	// "Print to console": {
+	// 	"prefix": "log",
+	// 	"body": [
+	// 		"console.log('$1');",
+	// 		"$2"
+	// 	],
+	// 	"description": "Log output to console"
+	// }
+	"Etiqueta PHP": {
+	  "prefix": "php",
+	  "body": ["<?php ${1} ?>"],
+	  "description": "Agregar etiqueta de php"
+	},
+
+	"PHP echo": {
+		"prefix": "phe",
+		"body": ["<?php echo ${1} ?>"],
+		"description": "echo"
+	},
+
+	"PHP textEN": {
+		"prefix": "ten",
+		"body": ["<?php echo textEN('${1}','${2}') ?>"],
+		"description": "echo"
+	},
+
+	"PHP Multilenguaje": {
+		"prefix": "phi",
+		"body": ["<?php _e('${1}','dep') ?>"],
+		"description": "Multilenguaje"
+	},
+
+	"PHP inicio componente": {
+		"prefix": "acf",
+		"body": [
+			"<?php",
+			"/*",
+			"\t\tName-Component",
+			"\t\t$component",
+			"\t\ttipo",
+			"\t\t---------------",
+			"\t\t\t\tCampo",
+			"\t\t\t\tcomponent__campo",
+			"\t\t\t\tTipo",
+			"\t\t\t\t-------------------",
+			" */",
+			"$$component = get_field('$component');",
+			"",
+			"if ($$component): ?>",
+			"",
+			"<?php endif ?>" ],
+		"description": "Inicializar componente"
+	},
+
+	"PHP if": {
+		"prefix": "if",
+		"body": [
+			"<?php if(${1}): ?>${2}",
+			"<?php endif ?>" ],
+		"description": "if"
+	},
+
+	"PHP acf while": {
+		"prefix": "sub",
+		"body": [
+			"<?php",
+			"while(have_rows('$componente')):the_row();",
+			"\t$$componente = get_sub_field('$componente');",
+			"\t?>",
+			"\tHTML",
+			"<?php endwhile;?>"
+		],
+		"description": "acf Obtener"
+	},
+
+	"PHP acf image": {
+		"prefix": "img",
+		"body": [
+			"<figure class=\"${1}\">",
+			"\t<?php if($$image): ?>",
+			"\t\t<img class=\"w-100\" src=\"<?php echo esc_url($$image['url'])?>\" alt=\"<?php echo esc_attr($$image['alt'])?>\">",
+			"\t<?php endif ?>",
+			"</figure>"
+		],
+		"description": "acf Obtener imagen"
+	},
+
+	"PHP acf picture": {
+	"prefix": "pic",
+	"body": [
+		"<picture class=\"${1}\">",
+		"\t<?php if($$image_mobile): ?>",
+		"\t\t<source media=\"(max-width: 992px)\"",
+		"\t\t\t\tsrcset=\"<?php echo esc_url($$image_mobile['url']); ?>\">",
+		"\t<?php endif ?>",
+		"\t<img src=\"<?php echo esc_url($$image_desktop['url']); ?>\"",
+		"\t\talt=\"<?php echo esc_attr($$image_desktop['alt']) ?>\"",
+		"\t\tclass=\"w-100 ${2}\">",
+		"</picture>"
+	],
+	"description": "acf Obtener imagen"
+	},
+
+	"PHP acf cta": {
+	"prefix": "cta",
+	"body": [
+		"<?php if($$cta):?>",
+		"\t<a class=\"\" href=\"<?php echo esc_url($$cta['url']);?>\" target=\"<?php echo esc_attr($$cta['target']);?>\">",
+		"\t\t<span class=\"\"><?php echo esc_html($$cta['title']); ?></span>",
+		"\t</a>",
+		"<?php endif; ?>"
+		],
+	"description": "acf Obtener cta"
+	},
+
+	"PHP acf ctas": {
+	"prefix": "ctas",
+		"body": [
+			"<?php if(have_rows('${1}')):",
+			"\twhile(have_rows('${2}')):the_row();",
+			"\t\t$$link = get_sub_field('${3}');",
+			"\t\t$$link_url = $$link['url'];",
+			"\t\t$$link_title = $$link['title'];",
+			"\t\t$$link_target = $$link['target'] ? $$link['target'] : '_self'; ?>",
+			"\t\t<a class=\"${4}\" href=\"<?php echo esc_url($$link); ?>\" target=\"<?php echo esc_attr($$link_target);?>\">",
+			"\t\t\t<span class=\"${5}\"><?php echo esc_html($$link_title); ?></span>",
+			"\t\t</a>",
+			"\t<?php endwhile;?>",
+			"<?php endif;?>"
+		],
+		"description": "acf Obtener ctas"
+	},
+
+	"PHP acf text": {
+	"prefix": "txt",
+		"body": [
+			"<p class=\"${1}\">",
+			"\t<?php if($$text):?>",
+			"\t\t<?php echo $$text; ?>",
+			"\t<?php endif ?>",
+			"</p>"
+		],
+	"description": "acf Obtener texto"
+	},
+
+	"PHP acf title": {
+		"prefix": "ttl",
+			"body": [
+				"<h2 class=\"${1}\">",
+				"\t<?php if($$title):?>",
+				"\t\t<?php echo $$title; ?>",
+				"\t<?php endif ?>",
+				"</h2>"
+			],
+		"description": "acf Obtener title"
+	},
+
+	"PHP loop post": {
+		"prefix": "lpost",
+			"body": [
+				"<h2 class=\"${1}\">",
+				"\t<?php if($$title):?>",
+				"\t\t<?php echo $$title; ?>",
+				"\t<?php endif ?>",
+				"</h2>"
+			],
+		"description": "acf Obtener title"
+	},
+
+	"PHP class": {
+		"prefix": "cl",
+		"body": [
+			"class=\"${1}\"",
+			],
+		"description": "if"
+	},
+}

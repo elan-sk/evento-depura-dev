@@ -1,0 +1,34 @@
+// Colors
+$black: #000000;
+$blue:#31479B;
+$green:#0C8339;
+$light: #F5F5F5;
+$white: #ffffff;
+$orange: #FD9F2F;
+
+// Fonts
+$font-primary: 'Ubuntu', sans-serif;
+
+// header utils
+$header_height_m: 200px;
+$header_height_l: 174px;
+
+// Media queries
+$breakpoints-min: (
+  's': 576px,
+  'm': 768px,
+  'l': 992px,
+  'xl': 1470px,
+);
+
+$breakpoints-max: ('xs': map-get($breakpoints-min, 's') - 1px,
+  's': map-get($breakpoints-min, 'm') - 1px,
+  'm': map-get($breakpoints-min, 'l') - 1px,
+  'l': map-get($breakpoints-min, 'xl') - 1px,
+);
+
+$container-max-widths: ('s': 540px,
+  'm': 720px,
+  'l': 960px,
+  'xl': 1320px,
+);

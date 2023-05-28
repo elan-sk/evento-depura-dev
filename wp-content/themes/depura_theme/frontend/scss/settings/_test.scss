@@ -1,0 +1,419 @@
+%mensaje {
+  position: relative;
+  &::before,
+  &::after {
+    content: "";
+    display: block;
+    justify-content: flex-start;
+    align-items: flex-start;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  &::before {
+    right: 0;
+    bottom: 0;
+    background-color: rgba($color: orange, $alpha: 0.1);
+  }
+  &::after {
+    background-color: white;
+    padding: 2px 6px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: black;
+    z-index: 999;
+  }
+}
+
+%mensaje-hover {
+  position: relative;
+  &:hover {
+    @extend %mensaje;
+  }
+}
+
+%test-style {
+  @extend %mensaje-hover;
+  border: 2px solid fuchsia !important;
+  &:hover::after {
+    display: none;
+  }
+
+  header {
+    border: 2.5px dashed gray;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6, p {
+    border: 2px dashed silver;
+  }
+
+  .container,
+  .container-sm,
+  .container-md,
+  .container-lg,
+  .container-xl,
+  .container-xxl,
+  .container-fluid {
+    border: 2px dashed blue;
+    @extend %mensaje-hover;
+    &:hover::after {
+      content: ".container";
+      top: -2rem;
+    }
+  }
+
+  .row.g-0 {
+    border: 2.5px dashed orange;
+    @extend %mensaje-hover;
+    &:hover::after {
+      content: ".row";
+      @include center("horizontal");
+      top: -2rem;
+    }
+  }
+
+  figure,
+  picture {
+    border: 2px dashed hotpink;
+    @extend %mensaje-hover;
+    &:hover::after {
+      @include center("both");
+    }
+  }
+
+  figure {
+    &:hover::after {
+      content: "figure";
+    }
+  }
+  picture {
+    &:hover::after {
+      content: "picture";
+    }
+  }
+
+  img {
+    pointer-events: none;
+  }
+
+  //Estilos de los cols-------------------------------------
+  @mixin cols($selector) {
+    //ciclo que agrega a los selectores los números del 1 hasta 12
+    @for $i from 1 through 12 {
+      #{$selector}#{$i} {
+        border: 2px dashed green;
+        @extend %mensaje-hover;
+        &:hover::after {
+          content: "#{$selector}#{$i}";
+        }
+      }
+    }
+  }
+  //arreglo de los container con tamaños de Boostrap
+  $selector-col: (
+    1: ".col-",
+    2: ".col-sm-",
+    3: ".col-md-",
+    4: ".col-lg-",
+    5: ".col-xl-",
+  );
+  //ciclo recorrer eñ arreglo
+  @for $i from 1 through length($selector-col) {
+    //llamar función que agrega los estilos
+    @include cols(map-get($selector-col, $i));
+  }
+  //Fin Estilos de los cols---------------------------------
+}
+
+.testing, %test {
+  @extend %test-style;
+}
+
+
+//Manejo de errores----------------------
+.test-error {
+  border: 2.5px dashed red !important;
+  position: relative;
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba($color: orange, $alpha: 0.1);
+  }
+
+  &__content-mensaje {
+    background-color: red;
+    padding: 2px 6px;
+    position: absolute;
+    top: rem(-2.5px);
+    right:rem(-2.5px);
+    width: auto;
+    max-width: 100%;
+    min-width: max-content;
+    &--viewport {
+      transform: translateY(-100%);
+    }
+  }
+
+  &__mensaje {
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    padding-left: space(.25);
+
+    &::before{
+      content: '\26A0 \FE0F ';
+      display: inline;
+    }
+
+    &:first-child{
+      padding-left: 0;
+    }
+  }
+}
+//fin Manejo de errores------------------
+
+//Manejo de etiqueta----------------------
+.test-etiqueta {
+  border: 2px dashed yellow;
+  position: relative;
+  $self: &;
+
+  &__content-mensaje {
+    background-color: rgba($color: yellow, $alpha: .7);
+    border-radius: 10px 10px 0 0;
+    padding: 0 2px;
+    position: absolute;
+    transform: translateY(-100%);
+    top: 0;
+    left: 0;
+    height: auto;
+    width: auto;
+    max-width: 100%;
+
+    &--nombre-componente {
+      right: initial !important;
+      left: 50% !important;
+      transform: translateX(-50%);
+      padding: 0 20px;
+      top: -2.6rem;
+      background-color: transparent !important;
+
+      #{$self}__mensaje {
+        color: whitesmoke !important;
+        text-shadow: 2.5px 2.5px 2.5px black;
+        font-style: normal;
+        font-size: 1.3rem;
+        font-weight: bold;
+        line-height: 2;
+
+      }
+    }
+  }
+
+  &__mensaje {
+    color: black;
+    font-size: .8rem;
+    font-weight: bold;
+    line-height: 2;
+  }
+}
+
+.test-etiqueta2 {
+  border: 2px dashed yellow;
+  position: relative;
+  $self: &;
+
+  &__content-mensaje {
+    background-color: rgba($color: orchid, $alpha: .7);
+    border-radius: 10px 10px 0 0;
+    padding: 0 2px;
+    position: absolute;
+    transform: translateY(-100%);
+    top: 0;
+    left: 2rem;
+    right: initial;
+    height: auto;
+    width: auto !important;
+    max-width: 100%;
+  }
+
+  &__mensaje {
+    color: black;
+    font-size: .8rem;
+    font-weight: bold;
+    line-height: 2;
+  }
+}
+
+.test-flex, .test-grid{
+  &>* {
+    border: 3px dashed gainsboro; //prueba
+  }
+}
+
+%t-content{
+  &>* {
+    border: 3px dashed gainsboro; //prueba
+  }
+};
+
+%t-res{
+  //prueba ayuda----------------
+  &::before{
+    background-color: blue;
+    border-radius: 0 0 0 10px;
+    content: "from(xs)";
+    color:white;
+    display: block;
+    font-weight: bold;
+    position: absolute;
+    padding: 3px 7px;
+    right: 0;
+    top: 0;
+  }
+
+  @include from(s) { // >'s': 576px
+    border: 3px solid red;
+    &::before{
+      background-color: red;
+      content: "from(s)";
+    }
+  }
+  @include from(m) { // >'m': 768px
+    border: 3px solid yellow;
+    &::before{
+      background-color: yellow;
+      content: "from(m)";
+      color: black;
+    }
+  }
+  @include from(l) { // >'l': 992px
+    border: 3px solid purple;
+    &::before{
+      background-color: purple;
+      content: "from(l)";
+      color: white;
+    }
+  }
+  @include from(xl) { // >'xl': 1470px
+    border: 3px solid green;
+    &::before{
+      background-color: green;
+      content: "from(xl)";
+    }
+  }
+};
+
+%t-aid{
+  //prueba responsive----------------
+  section, h1, .row {
+    border: 5px dashed red;
+  }
+  img {
+    border: 3px dashed yellowgreen;
+  }
+  .container {
+    border: 3px dashed blue;
+    .container {
+      border: 5px dashed red;
+    }
+  }
+  .row{
+  &.g-0 {
+      border: 5px dashed yellow;
+    }
+    div[class*="col"] {
+      border: 3px dashed green;
+    }
+  }
+
+  @extend %t-res;
+};
+
+
+.test-viewport{
+  //?prueba de responsive--------------
+  border: 3px dotted blue; // < 576px
+  top: 0;
+  left: 0;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  pointer-events: none;
+  z-index: 99999;
+
+  &>.test-etiqueta__content-mensaje{
+    background-color: blue;
+    left: initial;
+    right: -2px;
+    top: 22px;
+    border-radius: 0 0 0 10px;
+    .test-etiqueta__mensaje {
+      color: white;
+    }
+  }
+
+  @include from(s) {
+    // >'s': 576px
+    border-color: red;
+    &>.test-etiqueta__content-mensaje{
+      background-color: red;
+      .test-etiqueta__mensaje {
+        color: white;
+      }
+    }
+  }
+  @include from(m) {
+    // >'m': 768px
+    border-color: yellow;
+    &>.test-etiqueta__content-mensaje{
+      background-color: yellow;
+      .test-etiqueta__mensaje {
+        color: black
+      }
+    }
+  }
+  @include from(l) {
+    // >'l': 992.5px
+    border-color: purple;
+    &>.test-etiqueta__content-mensaje{
+      background-color: purple;
+      .test-etiqueta__mensaje {
+        color: white;
+      }
+    }
+  }
+  @include from(xl) {
+    // >'xl': 1470px
+    border-color: green;
+    &>.test-etiqueta__content-mensaje{
+      background-color: green;
+      .test-etiqueta__mensaje {
+        color: white;
+      }
+    }
+  }
+  //?---------------------------------
+}
+
+.parpadea {
+  animation-name: parpadeo;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes parpadeo {
+  0% { opacity: 1.0; }
+   50% { opacity: 0.0; }
+  100% { opacity: 1.0; }
+}

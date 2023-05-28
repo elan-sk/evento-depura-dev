@@ -1,0 +1,457 @@
+{
+	// Place your snippets for css here. Each snippet is defined under a snippet name and has a prefix, body and
+	// description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. Placeholders with the
+	// same ids are connected.
+	// Example:
+	// "Print to console": {
+	// 	"prefix": "log",
+	// 	"body": [
+	// 		"console.log('$1');",
+	// 		"$2"
+	// 	],
+	// 	"description": "Log output to console"
+	// }
+
+	//BEM_______________________________________
+	"scss BEM Bloque": {
+		"prefix": "blo",
+		"body": [
+			".${1} {}"
+		],
+		"description": "BEM Bloque"
+	},
+
+	"scss BEM Elemento": {
+		"prefix": "ele",
+		"body": [
+			"&__${1} {}"
+		],
+		"description": "BEM Elemento"
+	},
+
+	"scss BEM Modificador": {
+		"prefix": "mod",
+		"body": [
+			"&--${1} {}"
+		],
+		"description": "BEM Modificador"
+	},
+
+	"scss BEM Fragmento": {
+		"prefix": "fra",
+		"body": [
+			"&-${1} {}"
+		],
+		"description": "BEM Modificador"
+	},
+
+	"scss BEM ampersand": {
+		"prefix": "an",
+		"body": [
+			"&${1} {}"
+		],
+		"description": "BEM Modificador"
+	},
+	//Fin de BEM------------------------------------
+
+	//border colores_________________________________
+	"scss Border": {
+		"prefix": "bor",
+		"body": ["border: 3px solid $${1}; \/\/prueba"],
+		"description": "Border sin color"
+	},
+
+	"scss Border aqua": {
+		"prefix": "bora",
+		"body": ["border: 3px solid aqua; \/\/prueba"],
+	},
+
+	"scss Border blue": {
+		"prefix": "borb",
+		"body": ["border: 3px solid blue; \/\/prueba"],
+	},
+
+	"scss Border brown": {
+		"prefix": "borbb",
+		"body": ["border: 3px solid brown; \/\/prueba"],
+	},
+
+	"scss Border green": {
+		"prefix": "borg",
+		"body": ["border: 3px solid green; \/\/prueba"],
+	},
+
+	"scss Border white": {
+		"prefix": "borw",
+		"body": ["border: 3px solid white; \/\/prueba"],
+	},
+
+	"scss Border orange": {
+		"prefix": "boro",
+		"body": ["border: 3px solid orange; \/\/prueba"],
+	},
+
+	"scss Border orangered": {
+		"prefix": "boroo",
+		"body": ["border: 3px solid orangered; \/\/prueba"],
+	},
+
+	"scss Border purple": {
+		"prefix": "borp",
+		"body": ["border: 3px solid purple; \/\/prueba"],
+	},
+
+	"scss Border powderblue": {
+		"prefix": "borpp",
+		"body": ["border: 3px solid powderblue; \/\/prueba"],
+	},
+
+	"scss Border red": {
+		"prefix": "borr",
+		"body": ["border: 3px solid red; \/\/prueba"],
+	},
+
+	"scss Border rosybrown": {
+		"prefix": "borrr",
+		"body": ["border: 3px solid rosybrown; \/\/prueba"],
+	},
+
+	"scss Border yellow": {
+		"prefix": "bory",
+		"body": ["border: 3px solid yellow; \/\/prueba"],
+	},
+
+	"scss Border greenyellow": {
+		"prefix": "boryy",
+		"body": ["border: 3px solid greenyellow; \/\/prueba"],
+	},
+	//Fin border-------------------------------------
+
+	//background colores_________________________________
+	"scss color": {
+		"prefix": "co",
+		"body": ["color: $${1};"],
+		"description": "Color"
+	},
+
+
+	//background colores_________________________________
+	"scss Background": {
+		"prefix": "bac",
+		"body": ["background-color: $${1};"],
+		"description": "Border sin color"
+	},
+
+	"scss Background aqua": {
+		"prefix": "baca",
+		"body": ["background-color: rgba(aqua, .3); \/\/prueba"],
+	},
+
+	"scss Background blue": {
+		"prefix": "bacb",
+		"body": ["background-color: rgba(blue, .3); \/\/prueba"],
+	},
+
+	"scss Background brown": {
+		"prefix": "bacbb",
+		"body": ["background-color: rgba(brown, .3); \/\/prueba"],
+	},
+
+	"scss Background green": {
+		"prefix": "bacg",
+		"body": ["background-color: rgba(green, .3); \/\/prueba"],
+	},
+
+	"scss Background white": {
+		"prefix": "bacw",
+		"body": ["background-color: rgba(white, .3); \/\/prueba"],
+	},
+
+	"scss Background orange": {
+		"prefix": "baco",
+		"body": ["background-color: rgba(orange, .3); \/\/prueba"],
+	},
+
+	"scss Background orangered": {
+		"prefix": "bacoo",
+		"body": ["background-color: rgba(orangered, .3); \/\/prueba"],
+	},
+
+	"scss Background purple": {
+		"prefix": "bacp",
+		"body": ["background-color: rgba(purple, .3); \/\/prueba"],
+	},
+
+	"scss Background powderblue": {
+		"prefix": "bacpp",
+		"body": ["background-color: rgba(powderblue, .3); \/\/prueba"],
+	},
+
+	"scss Background red": {
+		"prefix": "bacr",
+		"body": ["background-color: rgba(red, .3); \/\/prueba"],
+	},
+
+	"scss Background rosybrown": {
+		"prefix": "bacrr",
+		"body": ["background-color: rgba(rosybrown, .3); \/\/prueba"],
+	},
+
+	"scss Background yellow": {
+		"prefix": "bacy",
+		"body": ["background-color: rgba(yellow, .3); \/\/prueba"],
+	},
+
+	"scss Background greenyellow": {
+		"prefix": "bacyy",
+		"body": ["background-color: rgba(greenyellow, .3); \/\/prueba"],
+	},
+	//Fin background------------------------------------
+
+	"scss extend": {
+		"prefix": "ex",
+		"body": ["@extend %${1};${2}"],
+	},
+
+	"scss include from": {
+		"prefix": "from",
+		"body": [
+			"@include from(${1}){${2}",
+			"}"
+		],
+	},
+
+	"scss include centrar vertical ": {
+		"prefix": "cenv",
+		"body": ["@include center('vertical');"],
+	},
+
+	"scss include centrar horizontal ": {
+		"prefix": "cenh",
+		"body": ["@include center('horizontal');"],
+	},
+
+	"scss include centrar both ": {
+		"prefix": "cenb",
+		"body": ["@include center('both');"],
+	},
+
+	"scss include bgcover ": {
+		"prefix": "bgcover",
+		"body": ["@include bgcover;"],
+	},
+
+	"scss include imageBg ": {
+		"prefix": "imgBg",
+		"body": ["@include imageBg('../img/${1}', rem($35px), rem($35px));"],
+	},
+
+	"scss include imageBgSplit ": {
+		"prefix": "imgBgS",
+		"body": ["@include imageBg($$path, $$btn-height, $$btn-width, ${1}, ${2});"],
+	},
+
+	"scss include background-img  ": {
+		"prefix": "bg-img ",
+		"body": ["background-image: url(\"../img/${1}\");"],
+	},
+
+	"scss include rem ": {
+		"prefix": "rm",
+		"body": ["rem(${1}px)"],
+	},
+
+	"scss include space ": {
+		"prefix": "sp",
+		"body": ["space(${1})"],
+	},
+
+	"scss include fluid-aspect": {
+		"prefix": "asp",
+		"body": ["@include fluid-aspect(${1}, 'img');"],
+	},
+
+	"scss depura responsive": {
+		"prefix": "res",
+		"body": [
+			"\/\/prueba responsive----------------",
+			"section, h1, .row {",
+			"\tborder: 5px dashed red;",
+			"}",
+			"img {",
+			"\tborder: 3px dashed yellowgreen;",
+			"}",
+			".container {",
+			"\tborder: 3px dashed blue;",
+			"\t.container {",
+			"\t\tborder: 5px dashed red;",
+			"\t}",
+			"}",
+			".row{",
+			"&.g-0 {",
+			"\t\tborder: 5px dashed yellow;",
+			"\t}",
+			"\tdiv[class*=\"col\"] {",
+			"\t\tborder: 3px dashed green;",
+			"\t}",
+			"}",
+			"border: 3px solid blue; \/\/ < 576px",
+			"position: relative;",
+			"&::before{",
+			"\tbackground-color: blue;",
+			"\tborder-radius: 0 0 0 10px;",
+			"\tcontent: \"from(xs)\";",
+			"\tcolor:white;",
+			"\tdisplay: block;",
+			"\tfont-weight: bold;",
+			"\tposition: absolute;",
+			"\tpadding: 3px 7px;",
+			"\tright: 0;",
+			"\ttop: 0;",
+			"}",
+			"",
+			"@include from(s) { \/\/ >'s': 576px",
+			"\tborder: 3px solid red;",
+			"\t&::before{",
+			"\t\tbackground-color: red;",
+			"\t\tcontent: \"from(s)\";",
+			"\t}",
+			"}",
+			"@include from(m) { \/\/ >'m': 768px",
+			"\tborder: 3px solid yellow;",
+			"\t&::before{",
+			"\t\tbackground-color: yellow;",
+			"\t\tcontent: \"from(m)\";",
+			"\t\tcolor: black;",
+			"\t}",
+			"}",
+			"@include from(l) { \/\/ >'l': 992px",
+			"\tborder: 3px solid purple;",
+			"\t&::before{",
+			"\t\tbackground-color: purple;",
+			"\t\tcontent: \"from(l)\";",
+			"\t\tcolor: white;",
+			"\t}",
+			"}",
+			"@include from(xl) { \/\/ >'xl': 1470px",
+			"\tborder: 3px solid green;",
+			"\t&::before{",
+			"\t\tbackground-color: green;",
+			"\t\tcontent: \"from(xl)\";",
+			"\t}",
+			"}",
+			"\/\/?---------------------------------",
+			"",
+		],
+		"description": "Para pruebas de responsive"
+	},
+
+	"scss depura responsive puntos": {
+		"prefix": "resp",
+		"body": [
+			"\/\/?prueba de responsive puntos ---------",
+			"border: 5px dotted blue; \/\/ < 576px",
+			"",
+			"@include from(s) { \/\/ >'s': 576px",
+			"\tborder: 5px dotted red;",
+			"}",
+			"@include from(m) { \/\/ >'m': 768px",
+			"\tborder: 5px dotted yellow;",
+			"}",
+			"@include from(l) { \/\/ >'l': 992px",
+			"\tborder: 5px dotted purple;",
+			"}",
+			"@include from(xl) { \/\/ >'xl': 1470px",
+			"\tborder: 5px dotted green;",
+			"}",
+			"\/\/?---------------------------------",
+			"",
+		],
+		"description": "Para pruebas de responsive"
+	},
+
+	"scss depura responsive rayas": {
+		"prefix": "resr",
+		"body": [
+			"\/\/?prueba de responsive rayas---------",
+			"border: 3px dashed blue; \/\/ < 576px",
+			"",
+			"@include from(s) { \/\/ >'s': 576px",
+			"\tborder: 3px dashed red;",
+			"}",
+			"@include from(m) { \/\/ >'m': 768px",
+			"\tborder: 3px dashed yellow;",
+			"}",
+			"@include from(l) { \/\/ >'l': 992px",
+			"\tborder: 3px dashed purple;",
+			"}",
+			"@include from(xl) { \/\/ >'xl': 1470px",
+			"\tborder: 3px dashed green;",
+			"}",
+			"\/\/?---------------------------------",
+			"",
+		],
+		"description": "Para pruebas de responsive"
+	},
+
+	"scss depura responsive doble": {
+		"prefix": "resd",
+		"body": [
+			"\/\/?prueba de responsive doble------------",
+			"border: 5px double blue; \/\/ < 576px",
+			"",
+			"@include from(s) { \/\/ >'s': 576px",
+			"\tborder: 5px double red;",
+			"}",
+			"@include from(m) { \/\/ >'m': 768px",
+			"\tborder: 5px double yellow;",
+			"}",
+			"@include from(l) { \/\/ >'l': 992px",
+			"\tborder: 5px double purple;",
+			"}",
+			"@include from(xl) { \/\/ >'xl': 1470px",
+			"\tborder: 5px double green;",
+			"}",
+			"\/\/?---------------------------------",
+			"",
+		],
+		"description": "Para pruebas de responsive"
+	},
+
+	"scss include flex items": {
+		"prefix": "fx",
+		"body": ["flex: 1 1  rem(map-get($container-max-widths, '${1}') / ${2});"],
+	},
+
+	"scss depura proba mobile": {
+		"prefix": "pm",
+		"body": [
+			"\/\/!Pruebas de mobile---------------------",
+			"body{",
+			"\tborder: 3px dashed yellow;",
+			"\t@media screen and (max-width:435px) {",
+			"\t\tborder: 3px dashed red",
+			"\t}",
+			"}\/\/!---------------------------------------",
+			"",
+		],
+		"description": "Para pruebas de responsive"
+	},
+
+	//pruebas
+	"scss tContent": {
+		"prefix": "tc",
+		"body": ["@extend %t-content; \/\/prueba${1}"],
+	},
+
+	"scss tResponsive": {
+		"prefix": "tr",
+		"body": ["@extend %t-res; \/\/prueba${1}"],
+	},
+
+	"scss tAid": {
+		"prefix": "ta",
+		"body": ["@extend %t-aid; \/\/prueba${1}"],
+	},
+}

@@ -1,0 +1,19 @@
+.main-menu {
+  background-color: $light;
+  &-brand{
+    display: flex;
+    align-items: center;
+    padding-left: rem(40px);
+    &__logo{
+      @include imageBg('../img-dist/logo-header.png', rem(50px), rem(100px));
+    }
+  }
+  &-menu{
+    padding:space(.25) space(1);
+    &__nav{
+      display: flex;
+      justify-content: flex-end;
+      gap:space(1.5);
+    }
+  }
+}

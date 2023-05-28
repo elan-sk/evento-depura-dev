@@ -1,0 +1,42 @@
+body,
+html {
+  height: 100%; }
+
+body {
+  direction: ltr;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+ul {
+  padding-left: 0;
+  list-style: none; }
+
+input::-moz-placeholder, textarea::-moz-placeholder {
+  color: gray; }
+
+input:-ms-input-placeholder, textarea:-ms-input-placeholder {
+  color: gray; }
+
+input::placeholder,
+textarea::placeholder {
+  color: gray; }
+
+input:active::-moz-placeholder, textarea:active::-moz-placeholder {
+  color: gray; }
+
+input:active:-ms-input-placeholder, textarea:active:-ms-input-placeholder {
+  color: gray; }
+
+input:active::placeholder,
+textarea:active::placeholder {
+  color: gray; }
+
+input[type="number"] {
+  -webkit-appearance: textfield;
+     -moz-appearance: textfield;
+          appearance: textfield; }
+  input[type="number"]::-webkit-outer-spin-button, input[type="number"]::-webkit-inner-spin-button {
+    margin: 0;
+    -webkit-appearance: none;
+            appearance: none; }
+

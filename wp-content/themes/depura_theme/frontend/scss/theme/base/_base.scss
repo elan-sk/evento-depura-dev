@@ -1,0 +1,44 @@
+
+body,
+html {
+  height: 100%;
+}
+
+body {
+  direction: ltr;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+ul {
+  padding-left: 0;
+  list-style: none;
+}
+
+input,
+textarea {
+  &::placeholder {
+    color: gray;
+  }
+
+  &:active {
+    &::placeholder {
+      color: gray;
+    }
+  }
+}
+
+input[type="number"] {
+  appearance: textfield;
+
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+    margin: 0;
+    appearance: none;
+  }
+}
+
+figure {
+  margin: 0;
+  padding: 0;
+}
