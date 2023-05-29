@@ -6,6 +6,6 @@ pass: vacio
 servidor: localhost
 ////////////////////////////
 usuario del sitio 
-dev
+user: eventodepura
 pass: eventodepura
 //////////////////////////////
