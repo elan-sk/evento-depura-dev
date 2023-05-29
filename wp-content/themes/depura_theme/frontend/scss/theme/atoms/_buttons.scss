@@ -1,11 +1,11 @@
 //Botones del principales
 %button, .button {
-  border-radius: rem(10px);
+  border-radius: 5px;
   display: inline-block;
-  margin: space(.1);
+  margin: 6px;
   object-fit: cover;
   overflow: hidden;
-  padding: 9px space(1);
+  padding: 5px 20px;
   text-align: center;
   text-decoration: none;
   transition: all 0.3s ease-in;
@@ -19,6 +19,7 @@
 
   &:hover {
     background-color: $green;
+    color: $white;
   }
 }
 

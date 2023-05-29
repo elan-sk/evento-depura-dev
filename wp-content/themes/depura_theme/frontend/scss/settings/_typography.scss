@@ -2,28 +2,27 @@
 h1 {
   color: $blue;
   font-family: $font-primary;
-  font-size: rem(56px);
+  font-size: 56px;
   font-weight: bold;
   line-height: 1.5;
 }
 
-
 %h2, .h2,
 h2 {
   @extend %h1;
-  font-size: rem(48px);
+  font-size: 48px;
 }
 
 %h3, .h3,
 h3 {
   @extend %h1;
-  font-size: rem(30px);
+  font-size: 30px;
 }
 
 
 %h4, .h4, h4 {
   @extend %h1;
-  font-size:rem(24px);
+  font-size:24px;
 }
 
 %body{
@@ -44,7 +43,7 @@ b {
 
 a {
   @extend %h2;
-  font-size: rem(16px);
+  font-size: 16px;
   font-weight: bold;
   text-decoration: none;
 }
