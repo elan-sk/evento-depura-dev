@@ -2,7 +2,7 @@
 h1 {
   color: $blue;
   font-family: $font-primary;
-  font-size:56px;
+  font-size: rem(56px);
   font-weight: bold;
   line-height: 1.5;
 }
@@ -23,7 +23,7 @@ h3 {
 
 %h4, .h4, h4 {
   @extend %h1;
-  font-size:24px;
+  font-size:rem(24px);
 }
 
 %body{
